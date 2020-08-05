@@ -158,9 +158,11 @@
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+     margin-left: auto;
+    margin-right: auto;
     text-align: center;
     max-width: 1600px;
-    background-image: linear-gradient(
+       background-image: linear-gradient(
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
@@ -192,6 +194,7 @@
     background-color: var(--akcent-color);
     color: var(--secondary-titel-color);
 }
+
 /* Секция Преимущества */
 .superiority,
 .client {
@@ -506,7 +509,6 @@ margin-right: 10px;
 .button-link:not(:last-child) {
 margin-right: 8px;
 }
-
 .button-name {
     border: none;
      padding-left: 22px;
@@ -536,7 +538,6 @@ margin-right: 8px;
     display: block;
     text-decoration: none;
 }
-
 .project-list {
     display: flex;
     flex-wrap: wrap;
@@ -554,7 +555,6 @@ margin-right: 8px;
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 
     0px 1px 1px  rgba(0, 0, 0, 0.12);
 }
-
 .project-item:nth-child(3n) {
     margin-right: 0;
 }
@@ -594,8 +594,7 @@ margin-right: 8px;
     overflow: hidden;
 }
 .project-item:hover .project-text {
-    transform: translateY(0);
-    
+    transform: translateY(0);  
 }
 .project-text {
     position: absolute;
@@ -621,4 +620,60 @@ margin-right: 8px;
 }
 .project-text:hover {
     background: rgba(33, 150, 243, 0.9);
+}
+/*Модальное окно*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+     
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 528px;
+    height: 581px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.modal-form {
+   padding: 40px;
+}
+.modal-name {
+    width: 448px;
+    height: 23px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1,15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+.modal-form input {
+    width: 448px;
+    height: 40px;
+    margin-top: 30px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.modal-send-button {
+    width: 200px;
+    height: 50px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    color: var(--secondary-titel-color);
 }

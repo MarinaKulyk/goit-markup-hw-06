@@ -41,7 +41,7 @@
         <!-- Секция ГЕРОЙ -->
         <section class="hero">
             <h1 class="hero-titel">Эффективные решения <br>для вашего бизнеса</h1>
-            <button class="hero-button"><span class="button-text">Заказать услугу</span> </button>
+            <button class="hero-button" data-modal-open><span class="button-text">Заказать услугу</span> </button>
         </section>
         <!-- ПРЕИМУЩЕСТВА -->
         <section class="section superiority">
@@ -322,7 +322,7 @@
             </div>
             <div>
                 <form class="footer-form">
-                    <b class="footer-form-name">подпишитесь на разсылку</b>
+                    <b class="footer-form-name">подпишитесь на рассылку</b>
                     <div>
                         <input type="mail" name="mail" placeholder="E-mail">
                         <button type="submit" class="footer-form-button">
@@ -333,16 +333,31 @@
                         </button>
                     </div>
                 </form>
-
-
-
             </div>
         </div>
     </footer>
 
+    <!--Модальное окно-->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <form class="modal-form">
+                <b class="modal-name">Оставьте свои данные, мы вам перезвоним</b>
 
+                <input type="text" name="user-name" placeholder="Имя">
+                <input type="tel" name="tel" placeholder="Телефон">
+                <input type="mail" name="mail" placeholder="Почта">
+                <input type="text" name="comment" placeholder="Комментарий">
 
+                <input type="checkbox" name="" value="html" id="html">
+                <label for="html">Соглашаюсь с рассылкой и принимаю Условия договора</label>
 
+                <button class="modal-send-button">Отправить</button>
+            </form>
+            <button class="modal-close-button" data-modal-close>Закрыть</button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
