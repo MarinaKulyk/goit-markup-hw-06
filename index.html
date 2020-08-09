@@ -345,21 +345,21 @@
                 <b class="modal-titel">Оставьте свои данные, мы вам перезвоним</b>
 
                 <div class="modal-form-input-wrapper">
-                    <input type="text" name="user-name" id="name">
+                    <input class="modal-input" type="text" name="user-name" id="name" placeholder="  ">
                     <label class="modal-label" for="name">Имя</label>
                     <svg class="modal-icon">
                         <use href="./images/symbol.svg#icon-person-black"></use>
                     </svg>
                 </div>
                 <div class="modal-form-input-wrapper">
-                    <input type="tel" name="tel" id="tel">
+                    <input class="modal-input" type="tel" name="tel" id="tel" placeholder="  ">
                     <label class="modal-label" for="tel">Телефон</label>
                     <svg class="modal-icon">
                         <use href="./images/symbol.svg#icon-phone-black"></use>
                     </svg>
                 </div>
                 <div class="modal-form-input-wrapper">
-                    <input type="mail" name="mail" id="mail">
+                    <input class="modal-input" type="mail" name="mail" id="mail" placeholder="  ">
                     <label class="modal-label" for="mail">Почта</label>
                     <svg class="modal-icon">
                         <use href="./images/symbol.svg#icon-email-black"></use>
@@ -368,9 +368,11 @@
 
                 <textarea class="modal-comment" name="user-comment" placeholder="Комментарий"></textarea>
 
-                <label class="modal-option-label">
-                    <input class="modal-checkbox" type="checkbox" name="contract" value="accept-contract">
-                    <span class="modal-custom-checkbox"></span>
+                <label class="checkbox-label">
+                    <input class="checkbox-input" type="checkbox" name="contract" value="accept-contract">
+                    <svg class="checkbox-icon">
+                        <use href="./images/symbol.svg#icon-icon-check"></use>
+                    </svg>
                     <span class="modal-option-span">Соглашаюсь с рассылкой и принимаю
                         <a href="#">Условия договора</a></span>
                 </label>
