@@ -471,6 +471,9 @@
 .footer-form input::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
+.colortext {
+    color: rgba(255, 255, 255, 0.6);
+}
 .footer-form-button {
     width: 200px;
     height: 50px;
@@ -684,19 +687,18 @@
 .modal-form textarea {
     height: 120px;
     padding: 12px 16px;
-    margin-bottom: 20px;
 }
 .modal-form input:hover,
 .modal-form textarea:hover {
     cursor: pointer;
     border-color: var(--akcent-color);
-    
 }
 .modal-form-input-wrapper {
     position: relative;
     margin-bottom: 28px;
 }
-.modal-label {
+.modal-label,
+.comment-label {
     position: absolute;
     top: 12px;
     left: 42px;
@@ -715,13 +717,38 @@
     width: 18px;
     height: 18px;
 }
+.modal-input:focus + .modal-label,
+.modal-input:hover + .modal-label,
+.modal-input:not(:placeholder-shown) + .modal-label{
+   transform: translate(-25px,-35px);
+   color: var(--akcent-color);  
+   border-color: var(--akcent-color);
+}
+.modal-input:focus ~ .modal-icon,
+.modal-input:hover ~ .modal-icon {
+    fill: var(--akcent-color);
+}
 
+.modal-form-comment-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+.comment-label {
+    top: 12px;
+    left: 16px;
+}
+.modal-comment:focus + .comment-label,
+.modal-comment:hover + .comment-label,
+.modal-comment:not(:placeholder-shown) + .comment-label {
+    transform: translateY(-35px);
+    color: var(--akcent-color);  
+    border-color: var(--akcent-color);
+}
  .checkbox-label {
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;  
 }
-
  .checkbox-input {
     position: absolute;
     width: 1px;
@@ -732,7 +759,6 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
 .checkbox-icon {
     width: 16px;
     height: 15px;
@@ -742,8 +768,8 @@
     border-radius: 2px;
 }
  .checkbox-input:checked + .checkbox-icon {
-    background-color: var(--akcent-color) ;
-    border: none;
+    background-color: var(--akcent-color);
+    border-color: var(--akcent-color);
 }
 .modal-send-button {
     width: 200px;
@@ -777,24 +803,11 @@
     width: 18px;
     height: 18px;
     position: absolute;
-    left: 22.22%;
-    right: 16.67%;
-    top: 16.67%;
-    bottom: 22.22%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .modal-close-button:hover { 
     fill: var(--akcent-color);
 }
 
-.modal-input:focus + .modal-label,
-.modal-input:hover + .modal-label,
-.modal-input:not(:placeholder-shown) + .modal-label{
-   transform: translate(-25px,-35px);
-   color: var(--akcent-color);  
-   border-color: var(--akcent-color);
-}
-.modal-input:focus ~ .modal-icon,
-.modal-input:hover ~ .modal-icon {
-    fill: var(--akcent-color);
-   
-}

@@ -325,7 +325,7 @@
                 <form class="footer-form">
                     <b class="footer-form-name">подпишитесь на рассылку</b>
                     <div>
-                        <input type="mail" name="mail" placeholder="E-mail">
+                        <input class="colortext" type="text" name="mail" placeholder="E-mail">
                         <button type="submit" class="footer-form-button">
                             <span class="subscribe">Подписаться</span>
                             <svg class="subscribe-icon">
@@ -365,8 +365,10 @@
                         <use href="./images/symbol.svg#icon-email-black"></use>
                     </svg>
                 </div>
-
-                <textarea class="modal-comment" name="user-comment" placeholder="Комментарий"></textarea>
+                <div class="modal-form-comment-wrapper">
+                    <textarea class="modal-comment" name="user-comment" id="comment" placeholder="  "></textarea>
+                    <label class="comment-label" for="comment">Комментарий</label>
+                </div>
 
                 <label class="checkbox-label">
                     <input class="checkbox-input" type="checkbox" name="contract" value="accept-contract">
